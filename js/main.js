@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Конфигурация Telegram Bot
     const TELEGRAM_CONFIG = {
         botToken: '7827149542:AAHkJshmbQsRNpeNF09ML5Ryc8g2pjOWSQg',
-        chatId: '162239434'
+        chatId: '1632580380'
     };
 
     // Функция для показа уведомлений
