@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Профессиональный медицинский педикюр, подология и эстетический маникюр в Москве. Запись к ведущему подологу Ангелине Васильевне.">
+    <title>Angelina Vasilevna | Профессиональный маникюр и подология</title>
+
+    <!-- Tailwind CSS v3 Play CDN -->
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#FAF8F5',     /* Warm linen / alabaster */
+                            cardBg: '#FFFFFF',
+                            dark: '#1C1E1B',     /* Charcoal / Spruce */
+                            darkLight: '#2C2F2B',
+                            sage: '#5E6F65',     /* Sophisticated medical green */
+                            sageLight: '#E8EBE9',
+                            rose: '#EC4899',     /* Vibrant signature pink */
+                            roseLight: '#FDF2F4',
+                            gold: '#D4A373'      /* Warm gold highlights */
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons & FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FAF8F5;
+            color: #1C1E1B;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Custom premium transition speed and cubic-bezier */
+        .transition-premium {
+            transition: all 0.8s cubic-bezier(0.32, 0.72, 0, 1);
+        }
+
+        /* Double-Bezel (Doppelrand) card architecture */
+        .double-bezel-outer {
+            padding: 8px;
+            background: rgba(28, 30, 27, 0.02);
+            border: 1px solid rgba(28, 30, 27, 0.04);
+            border-radius: 2rem;
+        }
+
+        .double-bezel-inner {
+            background: #FFFFFF;
+            border: 1px solid rgba(28, 30, 27, 0.04);
+            border-radius: calc(2rem - 8px);
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8), 0 12px 30px -10px rgba(28, 30, 27, 0.03);
+        }
+
+        /* Ambient scroll entry animation styling */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(24px) scale(0.98);
+            filter: blur(4px);
+            transition: opacity 1s cubic-bezier(0.32, 0.72, 0, 1),
+                transform 1s cubic-bezier(0.32, 0.72, 0, 1),
+                filter 1s cubic-bezier(0.32, 0.72, 0, 1);
+        }
+
+        .reveal-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            filter: blur(0);
+        }
+
+        /* Hide scrollbars for sliders */
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Film-grain overlay for Editorial Lux feel */
+        .grain-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            opacity: 0.012;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Floating effect for Hero graphic objects */
+        @keyframes subtle-float {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-10px) rotate(0.5deg);
+            }
+        }
+
+        .animate-subtle-float {
+            animation: subtle-float 6s ease-in-out infinite;
+        }
+
+        /* Hero Image Layout */
+        .hero-img-overlay {
+            background: linear-gradient(to top, rgba(28, 30, 27, 0.4) 0%, rgba(28, 30, 27, 0) 60%);
+        }
+    </style>
+</head>
+
+<body class="selection:bg-brand-sage selection:text-white">
+
+    <!-- Film Grain Texture -->
+    <div class="grain-overlay"></div>
+
+    <!-- Floating Fluid Island Navbar -->
+    <header class="fixed top-0 inset-x-0 z-50 px-4 pt-4">
+        <div
+            class="max-w-6xl mx-auto rounded-full bg-white/70 backdrop-blur-xl border border-white/30 shadow-[0_8px_32px_rgba(28,30,27,0.03)] px-6 py-2.5 md:py-3.5 flex items-center justify-between transition-all duration-300">
+            <!-- Brand Logo -->
+            <a href="#home" class="flex items-center space-x-3 group">
+                <img src="img/logo.png" alt="Logo"
+                    class="w-10 h-10 object-contain rounded-full border border-brand-roseLight bg-white p-0.5 group-hover:scale-105 transition-transform duration-300">
+                <span
+                    class="font-serif text-lg md:text-xl font-bold tracking-tight text-brand-dark group-hover:text-brand-sage transition-colors duration-300">Angelina
+                    Vasilevna</span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home"
+                    class="text-sm font-medium text-brand-dark/70 hover:text-brand-dark transition-colors duration-300">Главная</a>
+                <a href="#services"
+                    class="text-sm font-medium text-brand-dark/70 hover:text-brand-dark transition-colors duration-300">Услуги</a>
+                <a href="#about"
+                    class="text-sm font-medium text-brand-dark/70 hover:text-brand-dark transition-colors duration-300">О
+                    нас</a>
+                <a href="#gallery"
+                    class="text-sm font-medium text-brand-dark/70 hover:text-brand-dark transition-colors duration-300">Галерея</a>
+                <a href="#reviews"
+                    class="text-sm font-medium text-brand-dark/70 hover:text-brand-dark transition-colors duration-300">Отзывы</a>
+                <a href="#contact"
+                    class="text-sm font-medium text-brand-dark/70 hover:text-brand-dark transition-colors duration-300">Контакты</a>
+            </nav>
+
+            <!-- CTA Button-in-Button -->
+            <div class="hidden md:block">
+                <a href="#booking"
+                    class="group inline-flex items-center bg-brand-rose hover:bg-brand-rose/90 text-white text-sm font-medium py-2 pl-5 pr-2 rounded-full transition-all duration-300 shadow-sm shadow-black/10 active:scale-95">
+                    <span>Записаться</span>
+                    <span
+                        class="ml-3 w-7 h-7 rounded-full bg-white/10 flex items-center justify-center group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform duration-300">
+                        <svg class="w-3.5 h-3.5 stroke-white" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button id="menu-btn"
+                class="md:hidden flex items-center justify-center p-2 rounded-full hover:bg-black/5 focus:outline-none transition-colors duration-300">
+                <svg class="w-5 h-5 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-20 inset-x-4 bg-white/95 backdrop-blur-2xl rounded-3xl border border-black/5 shadow-2xl p-6 flex flex-col space-y-4 transition-all duration-500 transform origin-top">
+            <a href="#home" class="text-base font-semibold text-brand-dark py-2 border-b border-black/5">Главная</a>
+            <a href="#services" class="text-base font-semibold text-brand-dark py-2 border-b border-black/5">Услуги</a>
+            <a href="#about" class="text-base font-semibold text-brand-dark py-2 border-b border-black/5">О нас</a>
+            <a href="#gallery" class="text-base font-semibold text-brand-dark py-2 border-b border-black/5">Галерея</a>
+            <a href="#reviews" class="text-base font-semibold text-brand-dark py-2 border-b border-black/5">Отзывы</a>
+            <a href="#contact" class="text-base font-semibold text-brand-dark py-2 border-b border-black/5">Контакты</a>
+            <a href="#booking"
+                class="w-full bg-brand-rose hover:bg-brand-rose/90 text-white text-center py-3.5 rounded-full font-semibold mt-4 transition-colors duration-300">Записаться
+                онлайн</a>
+        </div>
+    </header>
+
+    <!-- Hero Section (Editorial Split) -->
+    <section id="home" class="min-h-[100dvh] flex items-center pt-28 md:pt-36 pb-20 relative overflow-hidden">
+        <!-- Structural Background Glows -->
+        <div
+            class="absolute top-[20%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-brand-roseLight/30 blur-[120px] pointer-events-none z-0">
+        </div>
+        <div
+            class="absolute bottom-[10%] right-[-10%] w-[40vw] h-[40vw] rounded-full bg-brand-sageLight/40 blur-[100px] pointer-events-none z-0">
+        </div>
+
+        <div
+            class="max-w-6xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
+            <!-- Left Side Typography -->
+            <div class="lg:col-span-7 space-y-6 text-left">
+                <!-- Eyebrow Pill -->
+                <div
+                    class="inline-flex items-center space-x-2 bg-brand-roseLight/60 border border-brand-rose/25 rounded-full px-3.5 py-1">
+                    <span class="text-[9px] uppercase tracking-[0.2em] font-bold text-brand-dark">Ангелина
+                        Васильевна</span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-rose animate-pulse"></span>
+                    <span class="text-[9px] uppercase tracking-[0.2em] font-medium text-brand-sage">Подо эксперт &
+                        эстетика</span>
+                </div>
+
+                <!-- Headline -->
+                <h1
+                    class="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl tracking-tight leading-[1.05] text-brand-dark">
+                    Профессиональный <br>
+                    <span class="italic font-light text-brand-sage">уход</span> за ногтями
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-base md:text-lg text-brand-dark/70 font-sans max-w-xl leading-relaxed">
+                    Современный медицинский педикюр, решение подологических проблем любой сложности и эстетический
+                    маникюр с гарантией стерильности в Москве.
+                </p>
+
+                <!-- Actions (CTA + Secondary) -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+                    <a href="#booking"
+                        class="group inline-flex items-center justify-center bg-brand-rose hover:bg-brand-rose/90 text-white font-medium py-3.5 pl-6 pr-2.5 rounded-full transition-all duration-300 shadow-md shadow-brand-dark/10 active:scale-[0.98]">
+                        <span>Записаться на прием</span>
+                        <span
+                            class="ml-4 w-9 h-9 rounded-full bg-white/10 flex items-center justify-center group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform duration-300">
+                            <svg class="w-4 h-4 stroke-white" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="#services"
+                        class="inline-flex items-center justify-center bg-white hover:bg-brand-roseLight/40 text-brand-dark border border-black/10 font-medium py-3.5 px-8 rounded-full transition-colors duration-300 active:scale-[0.98]">
+                        Наши услуги
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Side Image (Z-Axis Cascade) -->
+            <div class="lg:col-span-5 relative flex justify-center items-center">
+                <div class="relative w-full max-w-md animate-subtle-float">
+                    <!-- Bezel Container for Hero Image -->
+                    <div class="double-bezel-outer w-full">
+                        <div class="double-bezel-inner overflow-hidden aspect-[4/5] relative">
+                            <img src="img/podolog.png" alt="Подология" class="w-full h-full object-cover">
+                            <!-- Soft Gradient Layer on Image -->
+                            <div class="absolute inset-0 hero-img-overlay"></div>
+
+                            <!-- Floating Card Inside Hero -->
+                            <div
+                                class="absolute bottom-6 left-6 right-6 bg-white/80 backdrop-blur-md rounded-2xl p-4 border border-white/40 shadow-lg flex items-center space-x-3">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-brand-sage/10 flex items-center justify-center shrink-0">
+                                    <i class="fas fa-shield-halved text-brand-sage text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-brand-dark">100% Стерильно</h4>
+                                    <p class="text-[10px] text-brand-dark/60">Медицинские стандарты стерилизации
+                                        инструментов</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Overlapping Decorative Frame -->
+                    <div class="absolute -top-6 -right-6 w-28 h-28 hidden md:block double-bezel-outer">
+                        <div class="double-bezel-inner w-full h-full p-2 flex items-center justify-center bg-white">
+                            <img src="img/logo.png" alt="Logo" class="w-full h-full object-contain">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll down indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center">
+            <a href="#services"
+                class="text-brand-dark/50 hover:text-brand-dark transition-colors duration-300 flex flex-col items-center space-y-1">
+                <span class="text-[9px] uppercase tracking-[0.2em] font-medium">Скролл вниз</span>
+                <svg class="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section (Asymmetrical Bento Grid) -->
+    <section id="services" class="py-24 md:py-36 bg-white border-t border-black/5 relative z-10">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- Header Block -->
+            <div class="text-center max-w-2xl mx-auto mb-20 reveal-on-scroll">
+                <div
+                    class="inline-block rounded-full bg-brand-sage/10 px-3.5 py-1 text-[10px] uppercase tracking-[0.2em] font-bold text-brand-sage mb-4">
+                    Что мы умеем
+                </div>
+                <h2 class="font-serif text-4xl md:text-5xl tracking-tight text-brand-dark mb-4">
+                    Наши услуги
+                </h2>
+                <p class="text-base text-brand-dark/60">
+                    Индивидуальный парамедицинский подход к стопе и профессиональный уход за ногтями в стерильных
+                    условиях.
+                </p>
+            </div>
+
+            <!-- Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
+                <!-- Bento Card 1: Маникюр -->
+                <div
+                    class="md:col-span-6 double-bezel-outer flex flex-col hover:translate-y-[-4px] transition-premium reveal-on-scroll">
+                    <div class="double-bezel-inner p-8 md:p-10 flex flex-col h-full justify-between items-start">
+                        <div class="space-y-6 w-full">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-roseLight flex items-center justify-center">
+                                <i class="fas fa-hand-sparkles text-brand-rose text-lg"></i>
+                            </div>
+                            <div class="space-y-2">
+                                <h3 class="font-serif text-2xl font-bold text-brand-dark">Эстетический Маникюр</h3>
+                                <p class="text-sm text-brand-dark/70 leading-relaxed">
+                                    Аппаратный, классический и комбинированный маникюр. Укрепление ногтевой пластины,
+                                    выравнивание, покрытие гель-лаком премиум брендов и уникальный дизайн.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="pt-8 w-full border-t border-black/5 mt-8 flex justify-between items-center">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-brand-dark/40">Кабинет
+                                эстетики</span>
+                            <button onclick="openManicureModal()"
+                                class="group inline-flex items-center text-sm font-semibold text-brand-dark hover:text-brand-rose transition-colors duration-300">
+                                <span>Прайс-лист</span>
+                                <span
+                                    class="ml-2.5 w-6 h-6 rounded-full bg-black/5 group-hover:bg-brand-roseLight flex items-center justify-center transition-colors duration-300">
+                                    <svg class="w-3 h-3 stroke-brand-dark group-hover:stroke-brand-rose group-hover:translate-x-0.5 transition-all duration-300"
+                                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke-width="2.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento Card 2: Педикюр -->
+                <div
+                    class="md:col-span-6 double-bezel-outer flex flex-col hover:translate-y-[-4px] transition-premium reveal-on-scroll">
+                    <div class="double-bezel-inner p-8 md:p-10 flex flex-col h-full justify-between items-start">
+                        <div class="space-y-6 w-full">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-roseLight flex items-center justify-center">
+                                <i class="fas fa-shoe-prints text-brand-rose text-lg"></i>
+                            </div>
+                            <div class="space-y-2">
+                                <h3 class="font-serif text-2xl font-bold text-brand-dark">Эстетический Педикюр</h3>
+                                <p class="text-sm text-brand-dark/70 leading-relaxed">
+                                    Комплексный гигиенический и эстетический уход за стопами. Аппаратные технологии,
+                                    удаление ороговевшей кожи, обработка кутикулы, покрытие лаком и гель-лаком.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="pt-8 w-full border-t border-black/5 mt-8 flex justify-between items-center">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-brand-dark/40">Кабинет
+                                эстетики</span>
+                            <button onclick="openPedicureModal()"
+                                class="group inline-flex items-center text-sm font-semibold text-brand-dark hover:text-brand-rose transition-colors duration-300">
+                                <span>Прайс-лист</span>
+                                <span
+                                    class="ml-2.5 w-6 h-6 rounded-full bg-black/5 group-hover:bg-brand-roseLight flex items-center justify-center transition-colors duration-300">
+                                    <svg class="w-3 h-3 stroke-brand-dark group-hover:stroke-brand-rose group-hover:translate-x-0.5 transition-all duration-300"
+                                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke-width="2.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento Card 3: Подология (Asymmetric Wide Span) -->
+                <div
+                    class="md:col-span-12 double-bezel-outer flex flex-col hover:translate-y-[-4px] transition-premium reveal-on-scroll">
+                    <div
+                        class="double-bezel-inner p-8 md:p-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+                        <div class="space-y-6 max-w-3xl">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-sage/10 flex items-center justify-center">
+                                <i class="fas fa-user-nurse text-brand-sage text-lg"></i>
+                            </div>
+                            <div class="space-y-2">
+                                <div
+                                    class="inline-flex items-center space-x-2 bg-brand-sage/10 rounded-full px-2.5 py-0.5 text-[10px] font-bold text-brand-sage">
+                                    Парамедицинский кабинет
+                                </div>
+                                <h3 class="font-serif text-3xl font-bold text-brand-dark">Специализированная Подология
+                                </h3>
+                                <p class="text-sm text-brand-dark/70 leading-relaxed">
+                                    Безболезненная коррекция вросшего ногтя с помощью титановой нити, обработка и
+                                    лечение онихолизиса, микоза ногтей, удаление натоптышей, глубоких трещин и
+                                    бородавок. Изготовление разгрузочных систем и индивидуальных стелек.
+                                </p>
+                            </div>
+                            <!-- Quick Tags -->
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span
+                                    class="bg-brand-sageLight/50 text-brand-sage text-xs font-semibold px-3 py-1 rounded-full">Титановая
+                                    нить</span>
+                                <span
+                                    class="bg-brand-sageLight/50 text-brand-sage text-xs font-semibold px-3 py-1 rounded-full">Лечение
+                                    онихолизиса</span>
+                                <span
+                                    class="bg-brand-sageLight/50 text-brand-sage text-xs font-semibold px-3 py-1 rounded-full">Удаление
+                                    трещин</span>
+                                <span
+                                    class="bg-brand-sageLight/50 text-brand-sage text-xs font-semibold px-3 py-1 rounded-full">Индивидуальные
+                                    стельки</span>
+                            </div>
+                        </div>
+
+                        <div
+                            class="lg:border-l lg:border-black/5 lg:pl-10 lg:py-8 flex flex-col justify-center items-start lg:items-center shrink-0">
+                            <p class="text-xs text-brand-dark/50 mb-2">Консультация с планом ухода</p>
+                            <button onclick="openPodologyModal()"
+                                class="group inline-flex items-center bg-brand-sage hover:bg-brand-dark text-white text-sm font-semibold py-3 px-6 rounded-full transition-colors duration-300 shadow-sm active:scale-95">
+                                <span>Прайс подологии</span>
+                                <span
+                                    class="ml-3 w-6 h-6 rounded-full bg-white/15 flex items-center justify-center group-hover:translate-x-0.5 transition-transform duration-300">
+                                    <svg class="w-3 h-3 stroke-white" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke-width="2.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (Masters + Values - Editorial Split) -->
+    <section id="about" class="py-24 md:py-36 bg-brand-bg relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+
+            <!-- Left Column: Masters Carousel -->
+            <div class="lg:col-span-6 space-y-8 reveal-on-scroll">
+                <div class="space-y-4">
+                    <div
+                        class="inline-block rounded-full bg-brand-rose/10 px-3.5 py-1 text-[10px] uppercase tracking-[0.2em] font-bold text-brand-rose mb-2">
+                        Опыт и забота
+                    </div>
+                    <h2 class="font-serif text-4xl md:text-5xl tracking-tight text-brand-dark">
+                        Наши мастера
+                    </h2>
+                    <p class="text-sm text-brand-dark/60">
+                        Дипломированные эксперты с медицинским и профильным образованием, которые регулярно повышают
+                        квалификацию.
+                    </p>
+                </div>
+
+                <!-- Slider Double Bezel Frame -->
+                <div class="relative overflow-hidden w-full double-bezel-outer">
+                    <div class="double-bezel-inner p-6 relative">
+                        <div class="overflow-hidden relative w-full">
+                            <!-- Slider Container -->
+                            <div class="flex transition-transform duration-500 ease-in-out" id="masters-carousel">
+
+                                <!-- Master 1 -->
+                                <div class="w-full flex-shrink-0 flex flex-col items-center text-center px-4">
+                                    <div
+                                        class="relative w-44 h-44 mb-6 rounded-full overflow-hidden border-4 border-brand-roseLight bg-white shadow-md">
+                                        <img src="img/master.png" alt="Ангелина Васильевна"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                    <h3 class="font-serif text-xl font-bold text-brand-dark mb-1">Ангелина Васильевна
+                                    </h3>
+                                    <p class="text-xs font-semibold text-brand-rose uppercase tracking-wider mb-4">Подо
+                                        эксперт / Основатель</p>
+                                    <div class="text-sm text-brand-dark/70 max-w-sm leading-relaxed space-y-2">
+                                        <p>Инструктор курсов: "Титановая нить", "Подология в педикюре".</p>
+                                        <p class="text-xs text-brand-dark/65 italic">
+                                            Ежемесячно провожу день добрых дел: принимаю пациентов 75+ без оплаты.
+                                            Опекаю Всероссийское общество инвалидов в Хамовниках.
+                                            <span id="more-master1" style="display:none;" class="block mt-2 not-italic">
+                                                Специализируюсь на сложных случаях вросших ногтей, изготовлении
+                                                индивидуальных стелек и разгрузочных систем. Индивидуальные стажировки
+                                                для мастеров.
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <button id="toggle-master1"
+                                        class="text-brand-sage hover:text-brand-dark text-xs font-bold mt-4 underline underline-offset-4 focus:outline-none transition-colors duration-300">
+                                        Показать больше
+                                    </button>
+                                </div>
+
+                                <!-- Master 2 -->
+                                <div class="w-full flex-shrink-0 flex flex-col items-center text-center px-4">
+                                    <div
+                                        class="relative w-44 h-44 mb-6 rounded-full overflow-hidden border-4 border-brand-roseLight bg-white shadow-md">
+                                        <img src="img/master1.png" alt="Айниза" class="w-full h-full object-cover">
+                                    </div>
+                                    <h3 class="font-serif text-xl font-bold text-brand-dark mb-1">Айниза</h3>
+                                    <p class="text-xs font-semibold text-brand-rose uppercase tracking-wider mb-4">
+                                        Мастер эстетики</p>
+                                    <p class="text-sm text-brand-dark/70 max-w-sm leading-relaxed">
+                                        Эксперт в области идеального покрытия, выравнивания и художественного дизайна
+                                        ногтей. Владеет современными техниками аппаратного маникюра и эстетического
+                                        педикюра.
+                                    </p>
+                                </div>
+
+                                <!-- Master 3 -->
+                                <div class="w-full flex-shrink-0 flex flex-col items-center text-center px-4">
+                                    <div
+                                        class="relative w-44 h-44 mb-6 rounded-full overflow-hidden border-4 border-brand-roseLight bg-white shadow-md">
+                                        <img src="img/master2.jpg" alt="Анна Азарова"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                    <h3 class="font-serif text-xl font-bold text-brand-dark mb-1">Анна Азарова</h3>
+                                    <p class="text-xs font-semibold text-brand-rose uppercase tracking-wider mb-4">
+                                        Мастер эстетист-подолог</p>
+                                    <p class="text-sm text-brand-dark/70 max-w-sm leading-relaxed">
+                                        Опыт работы 2 года. Сочетает глубокие знания подологии с эстетическим
+                                        оформлением ногтей. Специализируется на аппаратных методиках педикюра и
+                                        наращивании ногтей.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Carousel Navigation Controls -->
+                        <div
+                            class="flex justify-between items-center absolute inset-x-4 top-1/2 -translate-y-1/2 pointer-events-none">
+                            <button onclick="prevSlide()"
+                                class="w-10 h-10 rounded-full bg-white/90 hover:bg-white shadow-md flex items-center justify-center text-brand-dark hover:text-brand-sage pointer-events-auto transition-colors duration-300">
+                                <i class="fas fa-chevron-left text-xs"></i>
+                            </button>
+                            <button onclick="nextSlide()"
+                                class="w-10 h-10 rounded-full bg-white/90 hover:bg-white shadow-md flex items-center justify-center text-brand-dark hover:text-brand-sage pointer-events-auto transition-colors duration-300">
+                                <i class="fas fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Salon Info -->
+            <div class="lg:col-span-6 space-y-10 reveal-on-scroll">
+                <div class="space-y-4">
+                    <div
+                        class="inline-block rounded-full bg-brand-sage/10 px-3.5 py-1 text-[10px] uppercase tracking-[0.2em] font-bold text-brand-sage mb-2">
+                        О студии
+                    </div>
+                    <h2 class="font-serif text-4xl md:text-5xl tracking-tight text-brand-dark">
+                        О нашем салоне
+                    </h2>
+                    <p class="text-sm text-brand-dark/70 leading-relaxed">
+                        Студия <strong>Angelina Vasilevna</strong> — это уютное и безопасное пространство, где
+                        эстетическая красота сочетается с профессиональной заботой о здоровье ваших стоп. Мы не
+                        маскируем проблемы, а помогаем устранить их причину.
+                    </p>
+                </div>
+
+                <!-- Concentric Logo Bezel Frame -->
+                <div class="double-bezel-outer">
+                    <div class="double-bezel-inner p-10 flex flex-col md:flex-row items-center gap-8 bg-white">
+                        <img src="img/logo.png" alt="Logo" class="w-28 h-28 object-contain shrink-0">
+                        <div class="space-y-4">
+                            <h4 class="font-serif text-lg font-bold text-brand-dark">Философия бренда</h4>
+                            <ul class="space-y-2 text-xs text-brand-dark/70">
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle-check text-brand-sage mt-0.5 mr-2"></i>
+                                    <span>Стерилизация медицинского уровня (Сухожаровой шкаф, УЗ-очистка)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle-check text-brand-sage mt-0.5 mr-2"></i>
+                                    <span>Индивидуальные одноразовые наборы расходных материалов</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle-check text-brand-sage mt-0.5 mr-2"></i>
+                                    <span>Премиальная лечебная космецевтика (Германия, Россия)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Gallery Section (Asymmetric Columns Grid) -->
+    <section id="gallery" class="py-24 md:py-36 bg-white border-t border-black/5 relative z-10">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- Header Block -->
+            <div class="text-center max-w-2xl mx-auto mb-20 reveal-on-scroll">
+                <div
+                    class="inline-block rounded-full bg-brand-rose/10 px-3.5 py-1 text-[10px] uppercase tracking-[0.2em] font-bold text-brand-rose mb-4">
+                    Галерея работ
+                </div>
+                <h2 class="font-serif text-4xl md:text-5xl tracking-tight text-brand-dark mb-4">
+                    Наши работы
+                </h2>
+                <p class="text-sm text-brand-dark/60">
+                    Примеры результатов лечения подологических проблем и стильные эстетические дизайны наших мастеров.
+                </p>
+            </div>
+
+            <!-- Asymmetric Masonry Image Matrix -->
+            <div class="space-y-16">
+                <!-- Категория: Маникюр -->
+                <div class="space-y-6">
+                    <h3 class="font-serif text-2xl font-semibold text-brand-dark text-center">Эстетика маникюра</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div
+                            class="double-bezel-outer group hover:-translate-y-1 transition-premium duration-700 reveal-on-scroll">
+                            <div class="double-bezel-inner overflow-hidden aspect-[4/3] bg-brand-roseLight">
+                                <img src="img/man1.jpg" alt="Маникюр работа 1"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            </div>
+                        </div>
+                        <div
+                            class="double-bezel-outer group hover:-translate-y-1 transition-premium duration-700 reveal-on-scroll">
+                            <div class="double-bezel-inner overflow-hidden aspect-[4/3] bg-brand-roseLight">
+                                <img src="img/man2.jpg" alt="Маникюр работа 2"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            </div>
+                        </div>
+                        <div
+                            class="double-bezel-outer group hover:-translate-y-1 transition-premium duration-700 reveal-on-scroll">
+                            <div class="double-bezel-inner overflow-hidden aspect-[4/3] bg-brand-roseLight">
+                                <img src="img/man3.jpg" alt="Маникюр работа 3"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Категория: Педикюр -->
+                <div class="space-y-6">
+                    <h3 class="font-serif text-2xl font-semibold text-brand-dark text-center pt-8">Идеальный педикюр
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div
+                            class="double-bezel-outer group hover:-translate-y-1 transition-premium duration-700 reveal-on-scroll">
+                            <div class="double-bezel-inner overflow-hidden aspect-[4/3] bg-brand-roseLight">
+                                <img src="img/ped1.jpg" alt="Педикюр работа 1"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            </div>
+                        </div>
+                        <div
+                            class="double-bezel-outer group hover:-translate-y-1 transition-premium duration-700 reveal-on-scroll">
+                            <div class="double-bezel-inner overflow-hidden aspect-[4/3] bg-brand-roseLight">
+                                <img src="img/ped2.jpg" alt="Педикюр работа 2"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            </div>
+                        </div>
+                        <div
+                            class="double-bezel-outer group hover:-translate-y-1 transition-premium duration-700 reveal-on-scroll">
+                            <div class="double-bezel-inner overflow-hidden aspect-[4/3] bg-brand-roseLight">
+                                <img src="img/ped3.jpg" alt="Педикюр работа 3"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Категория: Подология -->
+                <div class="space-y-6">
+                    <h3 class="font-serif text-2xl font-semibold text-brand-dark text-center pt-8">Подологическая
+                        практика</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div
+                            class="double-bezel-outer group hover:-translate-y-1 transition-premium duration-700 reveal-on-scroll">
+                            <div class="double-bezel-inner overflow-hidden aspect-[4/3] bg-brand-roseLight">
+                                <img src="img/pod1.jpg" alt="Подология работа 1"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            </div>
+                        </div>
+                        <div
+                            class="double-bezel-outer group hover:-translate-y-1 transition-premium duration-700 reveal-on-scroll">
+                            <div class="double-bezel-inner overflow-hidden aspect-[4/3] bg-brand-roseLight">
+                                <img src="img/pod2.jpg" alt="Подология работа 2"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            </div>
+                        </div>
+                        <div
+                            class="double-bezel-outer group hover:-translate-y-1 transition-premium duration-700 reveal-on-scroll">
+                            <div class="double-bezel-inner overflow-hidden aspect-[4/3] bg-brand-roseLight">
+                                <img src="img/pod3.jpg" alt="Подология работа 3"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section (Linen Horizontal Scroller) -->
+    <section id="reviews" class="py-24 md:py-36 bg-brand-bg border-t border-black/5 relative z-10">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- Header Block -->
+            <div class="text-center max-w-2xl mx-auto mb-20 reveal-on-scroll">
+                <div
+                    class="inline-block rounded-full bg-brand-sage/10 px-3.5 py-1 text-[10px] uppercase tracking-[0.2em] font-bold text-brand-sage mb-4">
+                    Отзывы клиентов
+                </div>
+                <h2 class="font-serif text-4xl md:text-5xl tracking-tight text-brand-dark mb-4">
+                    Что говорят о нас
+                </h2>
+                <p class="text-sm text-brand-dark/60">
+                    Оценки и реальные мнения пациентов, оставленные на картах Яндекс и 2ГИС.
+                </p>
+            </div>
+
+            <!-- Scroller Container Frame -->
+            <div class="relative px-8 reveal-on-scroll">
+                <!-- Navigation Arrows -->
+                <button onclick="scrollReviews('left')"
+                    class="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white hover:bg-brand-roseLight/30 border border-black/10 shadow-md flex items-center justify-center text-brand-dark hover:text-brand-sage transition-colors duration-300">
+                    <i class="fas fa-chevron-left text-xs"></i>
+                </button>
+
+                <button onclick="scrollReviews('right')"
+                    class="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white hover:bg-brand-roseLight/30 border border-black/10 shadow-md flex items-center justify-center text-brand-dark hover:text-brand-sage transition-colors duration-300">
+                    <i class="fas fa-chevron-right text-xs"></i>
+                </button>
+
+                <!-- Reviews Row -->
+                <div id="reviewsContainer" class="overflow-x-auto scrollbar-hide py-4" style="scroll-behavior: smooth;">
+                    <div class="flex space-x-8 w-max">
+
+                        <!-- Review 1 -->
+                        <div class="double-bezel-outer w-80 shrink-0">
+                            <div class="double-bezel-inner p-6 flex flex-col justify-between h-72">
+                                <div class="space-y-4">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex text-amber-400 text-xs space-x-0.5">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i>
+                                        </div>
+                                        <span
+                                            class="text-[10px] uppercase font-bold text-brand-dark/30 tracking-wider">2ГИС</span>
+                                    </div>
+                                    <p class="text-xs text-brand-dark/70 leading-relaxed line-clamp-5">
+                                        Приятно встретить профессионала своего дела, которому можно доверять. По делу,
+                                        без лишних ненужных процедур!
+                                    </p>
+                                </div>
+                                <div class="flex items-center space-x-3 border-t border-black/5 pt-4">
+                                    <img src="https://i0.photo.2gis.com/images/profile/30258560095238091_0547_96x96.jpg"
+                                        alt="YKeysh" class="w-9 h-9 rounded-full object-cover">
+                                    <div>
+                                        <h4 class="text-xs font-bold text-brand-dark">YKeysh</h4>
+                                        <p class="text-[10px] text-brand-dark/40">Клиент студии</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="double-bezel-outer w-80 shrink-0">
+                            <div class="double-bezel-inner p-6 flex flex-col justify-between h-72">
+                                <div class="space-y-4">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex text-amber-400 text-xs space-x-0.5">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i>
+                                        </div>
+                                        <span
+                                            class="text-[10px] uppercase font-bold text-brand-dark/30 tracking-wider">Яндекс
+                                            Карты</span>
+                                    </div>
+                                    <p class="text-xs text-brand-dark/70 leading-relaxed line-clamp-5">
+                                        Ангелина - прекрасный специалист, профессионал своего дела, да и в целом очень
+                                        приятный и отзывчивый человек! Не навязывает товары/услуги, но очень грамотно и
+                                        доступно объясняет суть проблемы. Очень помогла мне с вросшим ногтем.
+                                    </p>
+                                </div>
+                                <div class="flex items-center space-x-3 border-t border-black/5 pt-4">
+                                    <img src="https://avatars.mds.yandex.net/get-yapic/63256/RPA8t6VgLeylSWrA971HXHbajE-1571136636/islands-68"
+                                        alt="Tata" class="w-9 h-9 rounded-full object-cover">
+                                    <div>
+                                        <h4 class="text-xs font-bold text-brand-dark">Tata</h4>
+                                        <p class="text-[10px] text-brand-dark/40">Клиент студии</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="double-bezel-outer w-80 shrink-0">
+                            <div class="double-bezel-inner p-6 flex flex-col justify-between h-72">
+                                <div class="space-y-4">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex text-amber-400 text-xs space-x-0.5">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i>
+                                        </div>
+                                        <span
+                                            class="text-[10px] uppercase font-bold text-brand-dark/30 tracking-wider">Яндекс
+                                            Карты</span>
+                                    </div>
+                                    <p class="text-xs text-brand-dark/70 leading-relaxed line-clamp-5">
+                                        Пришла по рекомендации. Очень хороший специалист с медицинским образованием.
+                                        Самые приятные впечатления: все абсолютно стерильно, легкая рука, на
+                                        консультации все подробно объяснили.
+                                    </p>
+                                </div>
+                                <div class="flex items-center space-x-3 border-t border-black/5 pt-4">
+                                    <img src="https://avatars.mds.yandex.net/get-yapic/68143/0u-2/islands-68"
+                                        alt="Мария Cеврук" class="w-9 h-9 rounded-full object-cover">
+                                    <div>
+                                        <h4 class="text-xs font-bold text-brand-dark">Мария Cеврук</h4>
+                                        <p class="text-[10px] text-brand-dark/40">Клиент студии</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 4 -->
+                        <div class="double-bezel-outer w-80 shrink-0">
+                            <div class="double-bezel-inner p-6 flex flex-col justify-between h-72">
+                                <div class="space-y-4">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex text-amber-400 text-xs space-x-0.5">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i>
+                                        </div>
+                                        <span
+                                            class="text-[10px] uppercase font-bold text-brand-dark/30 tracking-wider">Яндекс
+                                            Карты</span>
+                                    </div>
+                                    <p class="text-xs text-brand-dark/70 leading-relaxed line-clamp-5">
+                                        Самый лучший подолог Ангелина! Потрясающий человек и супер профессионал. Много
+                                        было до нее подологов в Москве, но она превзошла всех своим подходом и качеством
+                                        работы.
+                                    </p>
+                                </div>
+                                <div class="flex items-center space-x-3 border-t border-black/5 pt-4">
+                                    <img src="https://avatars.mds.yandex.net/get-yapic/37154/0u-4/islands-68"
+                                        alt="Любовь" class="w-9 h-9 rounded-full object-cover">
+                                    <div>
+                                        <h4 class="text-xs font-bold text-brand-dark">Любовь</h4>
+                                        <p class="text-[10px] text-brand-dark/40">Клиент студии</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 5 -->
+                        <div class="double-bezel-outer w-80 shrink-0">
+                            <div class="double-bezel-inner p-6 flex flex-col justify-between h-72">
+                                <div class="space-y-4">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex text-amber-400 text-xs space-x-0.5">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                class="fas fa-star"></i>
+                                        </div>
+                                        <span
+                                            class="text-[10px] uppercase font-bold text-brand-dark/30 tracking-wider">2ГИС</span>
+                                    </div>
+                                    <p class="text-xs text-brand-dark/70 leading-relaxed line-clamp-5">
+                                        Пришел по рекомендации, все очень понравилось. Чуткий и заботливый персонал,
+                                        чистота на высшем уровне. В общем, 10 из 10, обязательно приду еще раз.
+                                    </p>
+                                </div>
+                                <div class="flex items-center space-x-3 border-t border-black/5 pt-4">
+                                    <img src="https://avatars.mds.yandex.net/get-yapic/40138/EGjWOUpK7kpYz6GwNeK6thFNbw-1/islands-68"
+                                        alt="Xitelio Lee" class="w-9 h-9 rounded-full object-cover">
+                                    <div>
+                                        <h4 class="text-xs font-bold text-brand-dark">Xitelio Lee</h4>
+                                        <p class="text-[10px] text-brand-dark/40">Клиент студии</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section (Glassmorphism & Preserved IDs) -->
+    <section id="booking" class="py-24 md:py-36 bg-white relative overflow-hidden z-10">
+        <!-- Structural Background Glows -->
+        <div
+            class="absolute top-1/2 left-[10%] w-[35vw] h-[35vw] rounded-full bg-brand-roseLight/20 blur-[100px] pointer-events-none z-0">
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10">
+            <!-- Left Info Panel -->
+            <div class="lg:col-span-5 space-y-8 reveal-on-scroll">
+                <div class="space-y-4">
+                    <div
+                        class="inline-block rounded-full bg-brand-sage/10 px-3.5 py-1 text-[10px] uppercase tracking-[0.2em] font-bold text-brand-sage mb-2">
+                        Онлайн запись
+                    </div>
+                    <h2 class="font-serif text-4xl md:text-5xl tracking-tight text-brand-dark">
+                        Записаться на прием
+                    </h2>
+                    <p class="text-sm text-brand-dark/60">
+                        Заполните контактные данные, выберите удобный день и время приема. Наш мастер свяжется с вами
+                        для подтверждения.
+                    </p>
+                </div>
+
+                <div class="space-y-6 bg-brand-bg p-6 rounded-3xl border border-black/5">
+                    <!-- Address Info -->
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-brand-roseLight flex items-center justify-center shrink-0">
+                            <i class="fas fa-map-location-dot text-brand-rose text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-brand-dark mb-1">Студия в Хамовниках</h4>
+                            <p class="text-xs text-brand-dark/60">г. Москва, ул. Фрунзенская, д. 10 (3 минуты пешком от
+                                метро)</p>
+                        </div>
+                    </div>
+
+                    <!-- Hours Info -->
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-brand-roseLight flex items-center justify-center shrink-0">
+                            <i class="fas fa-clock text-brand-rose text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-brand-dark mb-1">Режим работы</h4>
+                            <p class="text-xs text-brand-dark/60">Ежедневно: с 10:00 до 22:00 (только по предварительной
+                                записи)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Interactive Form -->
+            <div class="lg:col-span-7 reveal-on-scroll">
+                <!-- Outer double bezel -->
+                <div class="double-bezel-outer">
+                    <div class="double-bezel-inner p-8 bg-white">
+
+                        <!-- Notification Alert Container (Strictly preserved ID) -->
+                        <div id="notification" class="hidden mb-6 p-4 rounded-xl text-xs font-medium border"></div>
+
+                        <!-- Form element (Strictly preserved ID) -->
+                        <form id="bookingForm" class="space-y-6">
+
+                            <!-- Имя -->
+                            <div>
+                                <label for="name"
+                                    class="block text-xs font-bold text-brand-dark/70 uppercase tracking-wider mb-2">Ваше
+                                    имя *</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 bg-brand-bg rounded-xl border border-black/5 focus:outline-none focus:ring-2 focus:ring-brand-sage/30 focus:border-brand-sage text-sm transition-all duration-300"
+                                    placeholder="Иван Иванов">
+                            </div>
+
+                            <!-- Телефон -->
+                            <div>
+                                <label for="phone"
+                                    class="block text-xs font-bold text-brand-dark/70 uppercase tracking-wider mb-2">Телефон
+                                    *</label>
+                                <input type="tel" id="phone" name="phone" required
+                                    class="w-full px-4 py-3 bg-brand-bg rounded-xl border border-black/5 focus:outline-none focus:ring-2 focus:ring-brand-sage/30 focus:border-brand-sage text-sm transition-all duration-300"
+                                    placeholder="+7 (999) 123-45-67" value="+7 ">
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <!-- Выбор мессенджера -->
+                                <div>
+                                    <label for="messenger"
+                                        class="block text-xs font-bold text-brand-dark/70 uppercase tracking-wider mb-2">Предпочтительный
+                                        мессенджер</label>
+                                    <select id="messenger" name="messenger"
+                                        class="w-full px-4 py-3 bg-brand-bg rounded-xl border border-black/5 focus:outline-none focus:ring-2 focus:ring-brand-sage/30 focus:border-brand-sage text-sm transition-all duration-300">
+                                        <option value="">Не выбрано</option>
+                                        <option value="telegram">Telegram</option>
+                                        <option value="whatsapp">WhatsApp</option>
+                                    </select>
+                                </div>
+
+                                <!-- Выбор услуги -->
+                                <div>
+                                    <label for="service"
+                                        class="block text-xs font-bold text-brand-dark/70 uppercase tracking-wider mb-2">Услуга
+                                        *</label>
+                                    <select id="service" name="service" required
+                                        class="w-full px-4 py-3 bg-brand-bg rounded-xl border border-black/5 focus:outline-none focus:ring-2 focus:ring-brand-sage/30 focus:border-brand-sage text-sm transition-all duration-300">
+                                        <option value="">Выберите услугу</option>
+                                        <option value="Маникюр">Маникюр</option>
+                                        <option value="Педикюр">Педикюр</option>
+                                        <option value="Подология">Подология</option>
+                                        <option value="Маникюр + Педикюр">Маникюр + Педикюр</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Поле никнейма / контакта (Динамически показывается/скрывается) -->
+                            <div id="messengerContact" style="display: none;">
+                                <label for="messengerHandle"
+                                    class="block text-xs font-bold text-brand-dark/70 uppercase tracking-wider mb-2">Контакт
+                                    в мессенджере *</label>
+                                <input type="text" id="messengerHandle" name="messengerHandle"
+                                    class="w-full px-4 py-3 bg-brand-bg rounded-xl border border-black/5 focus:outline-none focus:ring-2 focus:ring-brand-sage/30 focus:border-brand-sage text-sm transition-all duration-300"
+                                    placeholder="@username или номер">
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <!-- Желаемая дата -->
+                                <div>
+                                    <label for="date"
+                                        class="block text-xs font-bold text-brand-dark/70 uppercase tracking-wider mb-2">Дата
+                                        приема *</label>
+                                    <input type="date" id="date" name="date" required
+                                        class="w-full px-4 py-3 bg-brand-bg rounded-xl border border-black/5 focus:outline-none focus:ring-2 focus:ring-brand-sage/30 focus:border-brand-sage text-sm transition-all duration-300">
+                                </div>
+
+                                <!-- Желаемое время -->
+                                <div>
+                                    <label for="time"
+                                        class="block text-xs font-bold text-brand-dark/70 uppercase tracking-wider mb-2">Желаемое
+                                        время *</label>
+                                    <select id="time" name="time" required
+                                        class="w-full px-4 py-3 bg-brand-bg rounded-xl border border-black/5 focus:outline-none focus:ring-2 focus:ring-brand-sage/30 focus:border-brand-sage text-sm transition-all duration-300">
+                                        <option value="">Выберите время</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="10:30">10:30</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="11:30">11:30</option>
+                                        <option value="12:00">12:00</option>
+                                        <option value="12:30">12:30</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="13:30">13:30</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="14:30">14:30</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="15:30">15:30</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="16:30">16:30</option>
+                                        <option value="17:00">17:00</option>
+                                        <option value="17:30">17:30</option>
+                                        <option value="18:00">18:00</option>
+                                        <option value="18:30">18:30</option>
+                                        <option value="19:00">19:00</option>
+                                        <option value="19:30">19:30</option>
+                                        <option value="20:00">20:00</option>
+                                        <option value="20:30">20:30</option>
+                                        <option value="21:00">21:00</option>
+                                        <option value="21:30">21:30</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Кнопка отправки с индикатором загрузки -->
+                            <button type="submit" id="submitBtn"
+                                class="w-full group inline-flex items-center justify-center bg-brand-rose hover:bg-brand-rose/90 text-white font-medium py-3.5 pl-6 pr-2.5 rounded-full transition-all duration-300 shadow-sm active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed">
+                                <span id="submitText" class="flex items-center">Записаться онлайн</span>
+                                <span id="loadingText" class="hidden flex items-center">
+                                    <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                                            stroke-width="4"></circle>
+                                        <path class="opacity-75" fill="currentColor"
+                                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                                        </path>
+                                    </svg>
+                                    Отправка запроса...
+                                </span>
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Address Map Section -->
+    <section id="contact" class="py-24 bg-brand-bg relative overflow-hidden z-10">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- Header Block -->
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal-on-scroll">
+                <div
+                    class="inline-block rounded-full bg-brand-rose/10 px-3.5 py-1 text-[10px] uppercase tracking-[0.2em] font-bold text-brand-rose mb-4">
+                    Как нас найти
+                </div>
+                <h2 class="font-serif text-4xl md:text-5xl tracking-tight text-brand-dark mb-4">
+                    Схема проезда
+                </h2>
+                <p class="text-sm text-brand-dark/60">
+                    Пешком 3-5 минут от станции метро "Фрунзенская" через парковую аллею до студии.
+                </p>
+            </div>
+
+            <!-- Double-bezel framed map widget -->
+            <div class="double-bezel-outer max-w-5xl mx-auto reveal-on-scroll">
+                <div class="double-bezel-inner overflow-hidden p-1.5 bg-white">
+                    <iframe
+                        src="https://yandex.ru/map-widget/v1/?ll=37.581544%2C55.725590&mode=routes&rtext=55.727395%2C37.580583~55.723752%2C37.582188&rtt=pd&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D117044005105&z=17.03"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        class="rounded-3xl"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-16 relative overflow-hidden z-10">
+        <!-- Structural Background Glows -->
+        <div
+            class="absolute bottom-[-10%] left-[-10%] w-[30vw] h-[30vw] rounded-full bg-brand-sage/10 blur-[80px] pointer-events-none">
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 border-b border-white/10 pb-12">
+                <!-- Branding info -->
+                <div class="md:col-span-5 space-y-4">
+                    <span class="font-serif text-2xl font-bold tracking-tight text-white block">Angelina
+                        Vasilevna</span>
+                    <p class="text-xs text-white/50 leading-relaxed max-w-sm">
+                        Студия заботы о здоровье стопы и эстетики ногтей в Москве. Медицинский подход к педикюру.
+                    </p>
+
+                    <!-- Social Links -->
+                    <div class="flex space-x-3.5 pt-2">
+                        <a href="https://www.instagram.com/podolog_angelina?igsh=MW1wOXUzd2JkczN2ZQ=="
+                            class="w-9 h-9 rounded-full bg-white/5 hover:bg-brand-rose hover:text-white flex items-center justify-center text-white/60 transition-colors duration-300">
+                            <i class="fab fa-instagram text-sm"></i>
+                        </a>
+                        <a href="https://t.me/podologan"
+                            class="w-9 h-9 rounded-full bg-white/5 hover:bg-brand-rose hover:text-white flex items-center justify-center text-white/60 transition-colors duration-300">
+                            <i class="fab fa-telegram text-sm"></i>
+                        </a>
+                        <a href="https://wa.me/79859078094"
+                            class="w-9 h-9 rounded-full bg-white/5 hover:bg-brand-rose hover:text-white flex items-center justify-center text-white/60 transition-colors duration-300">
+                            <i class="fab fa-whatsapp text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Empty space offset -->
+                <div class="md:col-span-2"></div>
+
+                <!-- Footer contacts -->
+                <div class="md:col-span-5 space-y-4">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-brand-rose">Контакты</h3>
+                    <ul class="space-y-3 text-xs text-white/60">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-brand-rose mt-0.5 mr-2.5"></i>
+                            <span>г. Москва, ул. Фрунзенская, д. 10</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-brand-rose mt-0.5 mr-2.5"></i>
+                            <span>+7 (999) 123-45-67</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-clock text-brand-rose mt-0.5 mr-2.5"></i>
+                            <span>Пн-Вс: 10:00 - 22:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Credits -->
+            <div
+                class="flex flex-col md:flex-row justify-between items-center pt-8 text-xs text-white/40 space-y-4 md:space-y-0">
+                <p>© 2020-2026 Angelina Vasilevna. Все права защищены.</p>
+                <p class="font-sans text-[10px]">Лицензированное медицинское оборудование и стандарты стерилизации</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= MODALS SECTION ================= -->
+
+    <!-- Podology Price Modal (Strictly preserved ID) -->
+    <div id="podologyModal"
+        class="fixed inset-0 bg-brand-dark/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl transform transition-all duration-500 scale-95 opacity-0"
+            id="podologyModalContent">
+
+            <!-- Sticky header inside modal -->
+            <div class="sticky top-0 bg-white border-b border-black/5 px-6 py-4 flex items-center justify-between z-10">
+                <h2 class="text-lg font-serif font-bold text-brand-dark flex items-center">
+                    <i class="fas fa-user-nurse text-brand-sage mr-3"></i>
+                    Прайс-лист подологии
+                </h2>
+                <button onclick="closePodologyModal()"
+                    class="w-8 h-8 rounded-full bg-brand-bg hover:bg-brand-roseLight/50 flex items-center justify-center text-brand-dark/50 hover:text-brand-dark transition-colors duration-300">
+                    <i class="fas fa-xmark text-xs"></i>
+                </button>
+            </div>
+
+            <div class="p-6 space-y-6">
+                <!-- Paramedical Section -->
+                <div class="bg-brand-sageLight/40 rounded-2xl p-5 border border-brand-sage/10">
+                    <h3 class="text-sm font-bold text-brand-dark mb-3 flex items-center">
+                        <i class="fas fa-stethoscope text-brand-sage mr-2"></i>
+                        Парамедицинский педикюр
+                    </h3>
+                    <p class="text-xs text-brand-dark/75 leading-relaxed">
+                        Профессиональный гигиенический аппаратный педикюр с лечебным подходом. Обработка проблемных зон
+                        стопы и ногтей.
+                    </p>
+                </div>
+
+                <!-- Problem zones -->
+                <div class="bg-brand-roseLight/20 rounded-2xl p-5 border border-brand-rose/10">
+                    <h3 class="text-sm font-bold text-brand-dark mb-3 flex items-center">
+                        <i class="fas fa-triangle-exclamation text-brand-rose mr-2"></i>
+                        Обработка проблемных зон
+                    </h3>
+                    <ul class="space-y-2 text-xs text-brand-dark/75 list-none">
+                        <li>• Онихолизис (отслоение ногтевой пластины)</li>
+                        <li>• Микоз (грибковое поражение ногтевых пластин)</li>
+                        <li>• Гематома под ногтем (очищение, обработка)</li>
+                    </ul>
+                </div>
+
+                <!-- Correction systems -->
+                <div class="bg-brand-sageLight/40 rounded-2xl p-5 border border-brand-sage/10">
+                    <h3 class="text-sm font-bold text-brand-dark mb-3 flex items-center">
+                        <i class="fas fa-screwdriver-wrench text-brand-sage mr-2"></i>
+                        Коррекционные системы
+                    </h3>
+                    <ul class="space-y-2 text-xs text-brand-dark/75 list-none">
+                        <li>• Установка коррекционной системы (Титановая нить)</li>
+                        <li>• Коррекция / Активация титановой нити</li>
+                    </ul>
+                </div>
+
+                <!-- Specialized procedures -->
+                <div class="bg-brand-roseLight/20 rounded-2xl p-5 border border-brand-rose/10">
+                    <h3 class="text-sm font-bold text-brand-dark mb-3 flex items-center">
+                        <i class="fas fa-hand-holding-medical text-brand-rose mr-2"></i>
+                        Специализированные процедуры
+                    </h3>
+                    <ul class="space-y-2 text-xs text-brand-dark/75 list-none">
+                        <li>• Обработка стержневой мозоли / бородавки</li>
+                        <li>• Протезирование ногтевой пластины</li>
+                        <li>• Обработка глубоких дермальных трещин на пятках</li>
+                    </ul>
+                </div>
+
+                <!-- Consultation & Ortho -->
+                <div class="bg-brand-sageLight/40 rounded-2xl p-5 border border-brand-sage/10">
+                    <h3 class="text-sm font-bold text-brand-dark mb-3 flex items-center">
+                        <i class="fas fa-user-md text-brand-sage mr-2"></i>
+                        Консультации и ортопедия
+                    </h3>
+                    <ul class="space-y-2 text-xs text-brand-dark/75 list-none">
+                        <li>• Первичная консультация подолога</li>
+                        <li>• Изготовление индивидуальных стелек</li>
+                    </ul>
+                </div>
+
+                <div class="pt-4 text-center">
+                    <a href="#booking" onclick="closePodologyModal()"
+                        class="w-full sm:w-auto inline-flex justify-center bg-brand-dark hover:bg-brand-sage text-white text-xs font-semibold py-3 px-8 rounded-full transition-colors duration-300">
+                        Записаться на консультацию
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Manicure Price Modal (Strictly preserved ID) -->
+    <div id="manicureModal"
+        class="fixed inset-0 bg-brand-dark/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl transform transition-all duration-500 scale-95 opacity-0"
+            id="manicureModalContent">
+
+            <!-- Sticky header inside modal -->
+            <div class="sticky top-0 bg-white border-b border-black/5 px-6 py-4 flex items-center justify-between z-10">
+                <h2 class="text-lg font-serif font-bold text-brand-dark flex items-center">
+                    <i class="fas fa-hand-sparkles text-brand-rose mr-3"></i>
+                    Прайс-лист маникюра
+                </h2>
+                <button onclick="closeManicureModal()"
+                    class="w-8 h-8 rounded-full bg-brand-bg hover:bg-brand-roseLight/50 flex items-center justify-center text-brand-dark/50 hover:text-brand-dark transition-colors duration-300">
+                    <i class="fas fa-xmark text-xs"></i>
+                </button>
+            </div>
+
+            <div class="p-6 space-y-6">
+                <!-- Manicure types -->
+                <div class="bg-brand-roseLight/20 rounded-2xl p-5 border border-brand-rose/10">
+                    <h3 class="text-sm font-bold text-brand-dark mb-3 flex items-center">
+                        <i class="fas fa-hands text-brand-rose mr-2"></i>
+                        Виды маникюра
+                    </h3>
+                    <ul class="space-y-2 text-xs text-brand-dark/75 list-none">
+                        <li>• Маникюр аппаратный / комбинированный</li>
+                        <li>• Маникюр классический обрезной</li>
+                    </ul>
+                </div>
+
+                <!-- Coating and design -->
+                <div class="bg-brand-sageLight/40 rounded-2xl p-5 border border-brand-sage/10">
+                    <h3 class="text-sm font-bold text-brand-dark mb-3 flex items-center">
+                        <i class="fas fa-palette text-brand-sage mr-2"></i>
+                        Покрытие и дизайн
+                    </h3>
+                    <ul class="space-y-2 text-xs text-brand-dark/75 list-none">
+                        <li>• Покрытие гель-лаком премиум (однотонное)</li>
+                        <li>• Комплекс: Маникюр + гель-лак</li>
+                        <li>• Покрытие лечебным лаком</li>
+                        <li>• Дизайн ногтей (1 ноготь - арт, градиент, втирка)</li>
+                    </ul>
+                </div>
+
+                <!-- Special techniques -->
+                <div class="bg-brand-roseLight/20 rounded-2xl p-5 border border-brand-rose/10">
+                    <h3 class="text-sm font-bold text-brand-dark mb-3 flex items-center">
+                        <i class="fas fa-gem text-brand-rose mr-2"></i>
+                        Специальные техники
+                    </h3>
+                    <ul class="space-y-2 text-xs text-brand-dark/75 list-none">
+                        <li>• Маникюр френч (классический / лунный)</li>
+                        <li>• Наращивание ногтей (акригель, гель)</li>
+                        <li>• Ремонт / донаращивание одного ногтя</li>
+                    </ul>
+                </div>
+
+                <!-- Additional services -->
+                <div class="bg-brand-sageLight/40 rounded-2xl p-5 border border-brand-sage/10">
+                    <h3 class="text-sm font-bold text-brand-dark mb-3 flex items-center">
+                        <i class="fas fa-trash-can text-brand-sage mr-2"></i>
+                        Дополнительные услуги
+                    </h3>
+                    <ul class="space-y-2 text-xs text-brand-dark/75 list-none">
+                        <li>• Снятие гель-лака чужого мастера</li>
+                        <li>• Снятие гель-лака с последующим покрытием</li>
+                    </ul>
+                </div>
+
+                <div class="pt-4 text-center">
+                    <a href="#booking" onclick="closeManicureModal()"
+                        class="w-full sm:w-auto inline-flex justify-center bg-brand-dark hover:bg-brand-sage text-white text-xs font-semibold py-3 px-8 rounded-full transition-colors duration-300">
+                        Записаться на маникюр
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pedicure Price Modal (Strictly preserved ID) -->
+    <div id="pedicureModal"
+        class="fixed inset-0 bg-brand-dark/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl transform transition-all duration-500 scale-95 opacity-0"
+            id="pedicureModalContent">
+
+            <!-- Sticky header inside modal -->
+            <div class="sticky top-0 bg-white border-b border-black/5 px-6 py-4 flex items-center justify-between z-10">
+                <h2 class="text-lg font-serif font-bold text-brand-dark flex items-center">
+                    <i class="fas fa-shoe-prints text-brand-rose mr-3"></i>
+                    Прайс-лист педикюра
+                </h2>
+                <button onclick="closePedicureModal()"
+                    class="w-8 h-8 rounded-full bg-brand-bg hover:bg-brand-roseLight/50 flex items-center justify-center text-brand-dark/50 hover:text-brand-dark transition-colors duration-300">
+                    <i class="fas fa-xmark text-xs"></i>
+                </button>
+            </div>
+
+            <div class="p-6 space-y-6">
+                <!-- Pedicure types -->
+                <div class="bg-brand-roseLight/20 rounded-2xl p-5 border border-brand-rose/10">
+                    <h3 class="text-sm font-bold text-brand-dark mb-3 flex items-center">
+                        <i class="fas fa-spa text-brand-rose mr-2"></i>
+                        Виды педикюра
+                    </h3>
+                    <ul class="space-y-2 text-xs text-brand-dark/75 list-none">
+                        <li>• Педикюр аппаратный (полная обработка стопы)</li>
+                        <li>• Экспресс-педикюр (только обработка пальцев)</li>
+                        <li>• Педикюр классический</li>
+                    </ul>
+                </div>
+
+                <!-- Gel coating -->
+                <div class="bg-brand-sageLight/40 rounded-2xl p-5 border border-brand-sage/10">
+                    <h3 class="text-sm font-bold text-brand-dark mb-3 flex items-center">
+                        <i class="fas fa-spray-can text-brand-sage mr-2"></i>
+                        Покрытие и комплексы
+                    </h3>
+                    <ul class="space-y-2 text-xs text-brand-dark/75 list-none">
+                        <li>• Комплекс: Педикюр + покрытие гель-лак</li>
+                        <li>• Комплекс: Педикюр + гель-лак френч</li>
+                        <li>• Покрытие обычным лаком / лечебным</li>
+                    </ul>
+                </div>
+
+                <!-- Additional services -->
+                <div class="bg-brand-roseLight/20 rounded-2xl p-5 border border-brand-rose/10">
+                    <h3 class="text-sm font-bold text-brand-dark mb-3 flex items-center">
+                        <i class="fas fa-circle-minus text-brand-rose mr-2"></i>
+                        Дополнительно
+                    </h3>
+                    <ul class="space-y-2 text-xs text-brand-dark/75 list-none">
+                        <li>• Снятие покрытия другого мастера</li>
+                        <li>• Обработка глубокой трещины на стопе (1 зона)</li>
+                    </ul>
+                </div>
+
+                <div class="pt-4 text-center">
+                    <a href="#booking" onclick="closePedicureModal()"
+                        class="w-full sm:w-auto inline-flex justify-center bg-brand-dark hover:bg-brand-sage text-white text-xs font-semibold py-3 px-8 rounded-full transition-colors duration-300">
+                        Записаться на педикюр
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 bg-brand-rose hover:bg-brand-rose/90 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-500 ease-in-out opacity-0 invisible z-40 transform translate-y-4">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18">
+            </path>
+        </svg>
+    </button>
+
+    <!-- Project Script -->
+    <script src="js/main.js"></script>
+
+    <!-- Animated Reveal Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal-on-scroll');
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.05,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            reveals.forEach(el => revealObserver.observe(el));
+
+            // Add scroll class to reveals immediately if they are in viewport at load
+            setTimeout(() => {
+                reveals.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight) {
+                        el.classList.add('visible');
+                    }
+                });
+            }, 100);
+        });
+    </script>
+</body>
+
+</html>
